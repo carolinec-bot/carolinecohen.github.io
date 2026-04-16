@@ -77,7 +77,7 @@ img {
 
 /* IMAGE TAILLE */
 .hero-img {
-    width: 300px;        /* taille */
+    width: 200px;        /* taille */
     display: block;
     margin: 20px auto;   /* centre horizontal */
 }
