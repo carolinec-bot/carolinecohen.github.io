@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
+    
 <head>
 <meta charset="UTF-8">
-<title>Research</title>
+<title>Recherche</title>
+    
 <link rel="stylesheet" href="style.css">
 
+    
+<!-- STYLE spécifique aux onglets -->
 <style>
-/* Onglets */
 .tabs {
     display: flex;
     gap: 10px;
@@ -34,6 +37,7 @@
 }
 </style>
 
+<!-- JAVASCRIPT pour les onglets -->    
 <script>
 function openTab(tabName, el) {
     let tabs = document.getElementsByClassName("tab-content");
@@ -51,10 +55,21 @@ function openTab(tabName, el) {
 
 <body>
 
+
+<!-- NAVBAR -->    
 <nav>
     <div>
         <a href="index.html">Accueil</a>
-        <a href="research.html">Recherche</a>
+        <!-- MENU DÉROULANT RESEARCH -->
+        <div class="dropdown">
+            <a href="research.html">Recherche</a>
+            
+            <div class="dropdown-content">
+                <a href="#sport">Physique du sport</a>
+                <a href="#fluides">Mécanique des fluides</a>
+                <a href="#morpho">Morphogénèse</a>
+            </div>
+        </div>
         <a href="teaching.html">Enseignement</a>
         <a href="people.html">Membres</a>
         <a href="publications.html">Publications</a>
@@ -62,19 +77,10 @@ function openTab(tabName, el) {
         <a href="jobs.html">Offres</a>
     </div>
 
-    <div class="dropdown">
-    <a href="research.html">Research</a>
-
-    <div class="dropdown-content">
-        <a href="research.html#sport">Physique du sport</a>
-        <a href="research.html#fluides">Mécanique des fluides</a>
-        <a href="research.html#morpho">Morphogénèse</a>
-    </div>
-</div>
 
     <div class="lang">
-        <a href="index.html">FR</a>
-        <a href="index_en.html">EN</a>
+        <a href="research.html">FR</a>
+        <a href="research_en.html">EN</a>
     </div>
 </nav>
 
