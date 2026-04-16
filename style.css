@@ -22,21 +22,21 @@ nav a {
 
 /* Dropdown */
 .dropdown {
-    position: relative;
+    position: absolute;
     display: inline-block;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background: white;
+    background: #1e1e2f;
     min-width: 200px;
 }
 
 .dropdown-content a {
     display: block;
     padding: 10px;
-    color: black;
+    color: white;
 }
 
 .dropdown:hover .dropdown-content {
