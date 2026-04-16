@@ -52,6 +52,13 @@ img {
     border-radius: 10px;
 }
 
+/* IMAGE TAILLE */
+.hero-img {
+    width: 300px;        /* taille */
+    display: block;
+    margin: 20px auto;   /* centre horizontal */
+}
+
 /* MOBILE */
 @media (max-width: 600px) {
     nav {
