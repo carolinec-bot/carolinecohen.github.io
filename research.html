@@ -35,7 +35,7 @@
 </style>
 
 <script>
-function openTab(tabName) {
+function openTab(tabName, el) {
     let tabs = document.getElementsByClassName("tab-content");
     for (let t of tabs) t.style.display = "none";
 
@@ -43,7 +43,7 @@ function openTab(tabName) {
     buttons.forEach(b => b.classList.remove("active"));
 
     document.getElementById(tabName).style.display = "block";
-    event.target.classList.add("active");
+    el.classList.add("active");
 }
 </script>
 
@@ -62,9 +62,9 @@ function openTab(tabName) {
 
 <!-- Onglets -->
 <div class="tabs">
-    <button onclick="openTab('sport')" class="active">Physique du sport</button>
-    <button onclick="openTab('fluides')">Mécanique des fluides</button>
-    <button onclick="openTab('morpho')">Morphogénèse</button>
+    <button onclick="openTab('sport', this)" class="active">Physique du sport</button>
+    <button onclick="openTab('fluides', this)">Mécanique des fluides</button>
+    <button onclick="openTab('morpho', this)">Morphogénèse</button>
 </div>
 
 <!-- CONTENU SPORT -->
