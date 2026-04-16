@@ -10,8 +10,6 @@ nav {
     justify-content: space-between;
     background: #1e1e2f;
     padding: 15px;
-    position: sticky;
-    top: 0;
 }
 
 nav a {
@@ -22,7 +20,7 @@ nav a {
 
 /* Dropdown */
 .dropdown {
-    position: absolute;
+    position: relative;
     display: inline-block;
 }
 
