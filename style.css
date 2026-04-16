@@ -18,6 +18,29 @@ nav a {
     text-decoration: none;
 }
 
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 200px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 .lang {
     margin-right: 20px;
 }
