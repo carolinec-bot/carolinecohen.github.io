@@ -1,22 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Research</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* Onglets */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    padding: 10px;
+    border: none;
+    background: #ddd;
+    cursor: pointer;
+}
+
+.tabs button.active {
+    background: #1e1e2f;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+</style>
+
+<script>
+function openTab(tabName) {
+    let tabs = document.getElementsByClassName("tab-content");
+    for (let t of tabs) t.style.display = "none";
+
+    let buttons = document.querySelectorAll(".tabs button");
+    buttons.forEach(b => b.classList.remove("active"));
+
+    document.getElementById(tabName).style.display = "block";
+    event.target.classList.add("active");
+}
+</script>
+
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+</nav>
+
 <div class="container">
+
 <h1>Research</h1>
 
-<div class="grid">
-
-<div class="card">
-<img src="sport.jpg">
-<h3><a href="sport.html">Physique du sport</a></h3>
+<!-- Onglets -->
+<div class="tabs">
+    <button onclick="openTab('sport')" class="active">Physique du sport</button>
+    <button onclick="openTab('fluides')">Mécanique des fluides</button>
+    <button onclick="openTab('morpho')">Morphogénèse</button>
 </div>
 
-<div class="card">
-<img src="fluids.jpg">
-<h3><a href="fluids.html">Mécanique des fluides</a></h3>
+<!-- CONTENU SPORT -->
+<div id="sport" class="tab-content" style="display:block;">
+    <div class="grid">
+
+        <div class="card">
+            <img src="archery.jpg">
+            <h3><a href="archery.html">Tir à l'arc</a></h3>
+        </div>
+
+        <div class="card">
+            <img src="rugby.jpg">
+            <h3>Mêlée</h3>
+        </div>
+
+    </div>
 </div>
 
-<div class="card">
-<img src="morpho.jpg">
-<h3><a href="morpho.html">Morphologie</a></h3>
+<!-- CONTENU FLUIDES -->
+<div id="fluides" class="tab-content">
+    <div class="grid">
+        <div class="card">
+            <img src="fluid1.jpg">
+            <h3>Écoulements</h3>
+        </div>
+    </div>
+</div>
+
+<!-- CONTENU MORPHO -->
+<div id="morpho" class="tab-content">
+    <div class="grid">
+        <div class="card">
+            <img src="morpho1.jpg">
+            <h3>Formes biologiques</h3>
+        </div>
+    </div>
 </div>
 
 </div>
-</div>
+
+</body>
+</html>
