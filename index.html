@@ -5,8 +5,50 @@
 <title>Accueil</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
+    
 <body>
+
+<!-- STYLE spécifique aux onglets -->
+<style>
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    padding: 10px;
+    border: none;
+    background: #ddd;
+    cursor: pointer;
+}
+.tabs button.active {
+    background: #1e1e2f;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+</style>
+
+<!-- JAVASCRIPT pour les onglets -->
+<script>
+function openTab(tabName, el) {
+    let tabs = document.getElementsByClassName("tab-content");
+    for (let t of tabs) t.style.display = "none";
+
+    let buttons = document.querySelectorAll(".tabs button");
+    buttons.forEach(b => b.classList.remove("active"));
+
+    document.getElementById(tabName).style.display = "block";
+    el.classList.add("active");
+}
+</script>
 
 
 <!-- NAVBAR -->
@@ -32,13 +74,15 @@
         
     </div>
 
-
+  <!-- LANGUE -->
     <div class="lang">
         <a href="index.html">FR</a>
         <a href="index_en.html">EN</a>
     </div>
 </nav>
 
+
+    <!-- CONTENU -->
 <div class="container">
     <h1>Bienvenue</h1>
     <img src="photo.png" class="hero-img">
